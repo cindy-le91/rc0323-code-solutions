@@ -69,7 +69,7 @@ function introduceWarnerBro(name) {
     case 'dot':
       return 'I\'m cute~';
     default:
-      console.log('Goodnight everybody!');
+      return 'Goodnight everybody!';
   }
 }
 
@@ -88,6 +88,6 @@ function recommendMovie(genre) {
     case 'sci-fi':
       return 'Interstellar';
     default:
-      console.log('Goodnight everybody!');
+      return 'Genre not recognized. Choose between action, comedy, horror, drama, musical, or sci-fi';
   }
 }
