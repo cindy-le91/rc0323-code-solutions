@@ -17,10 +17,10 @@ A method, like a function, is a set of instructions that perform a task. The dif
 pop() method. The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
 
 - How do you round a number down to the nearest integer?
-math.floor
+Math.floor()
 
 - How do you generate a random number?
-math.random
+Math.random()
 
 - How do you delete an element from an array?
 splice()
