@@ -14,7 +14,7 @@ a method is a function which a property of an object
 A method, like a function, is a set of instructions that perform a task. The difference is that a method is associated with an object, while a function is not.
 
 - How do you remove the last element from an array?
-pop() method. The pop() method removes the last element from an array and returns that element. This method changes the length of the array.
+pop() method. The pop() method removes the last element from an array and returns that element. This method changes the length of the array
 
 - How do you round a number down to the nearest integer?
 Math.floor()
