@@ -1,0 +1,27 @@
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+button.active {
+  color: white;
+}
+
+input.text:focus {
+  color: #654;
+}
+
+tr:nth-child(odd) {
+  background-color: #c6bec0;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
