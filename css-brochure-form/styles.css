@@ -1,0 +1,56 @@
+html {
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+h4 {
+  color: #ff5f5f;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+section {
+  font-size: 12px;
+  padding: 10px;
+}
+
+label {
+  text-transform: uppercase;
+  margin: 15px;
+}
+
+input {
+  padding: 8px 0;
+  margin: 10px;
+  border-radius: 3px;
+  border-color: lightgray;
+  width: 350px;
+  margin-bottom: 10px;
+}
+
+select {
+  padding: 8px 0;
+  margin: 10px;
+  border-radius: 3px;
+  border-color: lightgray;
+  background: #f1f1f1;
+  width: 350px;
+  margin-bottom: 10px;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+button {
+  color: white;
+  background-color: #ff5f5f;
+  border-color: #ff5f5f;
+  border-radius: 12px;
+  padding: 2px 12px;
+}
+
+.container {
+  width: 400px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
