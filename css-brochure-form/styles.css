@@ -1,54 +1,80 @@
 html {
-  font-family: "Hind Siliguri", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
 }
 
 h4 {
   color: #ff5f5f;
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 section {
   font-size: 12px;
-  padding: 10px;
+  padding-bottom: 5px;
 }
 
 label {
   text-transform: uppercase;
   margin: 15px;
+  margin-left: 20px;
+  padding: 0 !important;
+}
+
+[placeholder] {
+  font-size: 14px;
+  color: #f8f8f8;
+  opacity: 0.5;
+  padding: 10px;
+}
+
+[for] {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 10px 0;
 }
 
 input {
   padding: 8px 0;
-  margin: 10px;
-  border-radius: 3px;
+  margin-left: 10px;
+  margin-top: 3px;
+  border-radius: 5px;
   border-color: lightgray;
-  width: 350px;
+  width: 100%;
   margin-bottom: 10px;
 }
 
 select {
   padding: 8px 0;
-  margin: 10px;
+  margin-left: 10px;
   border-radius: 3px;
   border-color: lightgray;
   background: #f1f1f1;
-  width: 350px;
+  width: 100%;
   margin-bottom: 10px;
-  font-family: "Hind Siliguri", sans-serif;
+  font-family: "Brandon Grotesque", sans-serif;
 }
 
 button {
   color: white;
   background-color: #ff5f5f;
   border-color: #ff5f5f;
-  border-radius: 12px;
-  padding: 2px 12px;
+  border-radius: 15px;
+  padding: 5px 20px;
+  font-weight: bold;
+  font-family: "Brandon Grotesque", sans-serif;
+  border: 0;
+}
+
+.submitcontainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-left: 10px;
 }
 
 .container {
-  width: 400px;
+  width: 450px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
