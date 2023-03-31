@@ -1,0 +1,87 @@
+.background {
+  background-color: #1da1f2;
+}
+
+.container {
+  max-width: 900px;
+  font-family: lato, sans-serif;
+  font-weight: 100;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  color: white;
+}
+
+h4 {
+  margin-block-start: 0.8em !important;
+  margin-block-end: 0.8em !important;
+}
+
+img {
+  width: 90px;
+  height: 90px;
+  background-color: white;
+}
+
+#first-row {
+  justify-content: center;
+}
+
+.column-one-third {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(100% / 3);
+  align-items: center;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.is-text-center {
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 100 !important;
+  margin: 1px;
+  color: #f1f1f1;
+}
+
+.img-container3 {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: url("./images/discussion.png");
+  background-position: 50% 50%;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.img-container2 {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: url("./images/cloud-computing.png");
+  background-position: 50% 50%;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.img-container1 {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background: url("./images/merge.png");
+  background-position: 50% 50%;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  background-color: white;
+}
