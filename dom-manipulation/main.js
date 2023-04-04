@@ -5,7 +5,7 @@ function click(event) {
   numberClicked += 1;
   console.log(numberClicked);
   const clickCount = document.querySelector('.click-count');
-  clickCount.textContent = numberClicked;
+  clickCount.textContent = 'Clicks: ' + numberClicked;
 
   const hotButton = document.querySelector('.hot-button');
   console.log(hotButton);
