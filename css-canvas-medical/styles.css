@@ -10,6 +10,7 @@
   width: 93%;
   margin-left: auto;
   margin-right: auto;
+  height: 100px;
 }
 
 .main-header {
@@ -56,6 +57,9 @@
 .second-row-content {
   padding-top: 4rem;
   padding-left: 4rem;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0 0 0 / 25%);
 }
 
 h3 {
@@ -91,9 +95,8 @@ h3 {
   padding-top: 30px;
 }
 
-.third-row-1 h2 {
-  font-size: 28px;
-  margin: 0;
+.third-row-heading-size {
+  font-size: 26px;
 }
 
 .third-row-text p {
@@ -182,6 +185,10 @@ h3 {
   bottom: 20px;
 }
 
+.h2-fourth-row-size {
+  font-size: 26px;
+}
+
 #fifth-row {
   background-color: #5a5a5a;
   width: 100%;
@@ -195,6 +202,8 @@ h3 {
 .fifth-row-heading {
   font-size: 44px;
   color: #faf9f6;
+  position: relative;
+  bottom: 20px;
 }
 
 .column-one-fourth {
@@ -203,6 +212,8 @@ h3 {
 
 .fifth-row-column-one {
   line-height: 50px;
+  position: relative;
+  top: 50px;
 }
 
 .contact-info {
@@ -244,7 +255,7 @@ h3 {
   flex-direction: row;
   color: #5a5a5a;
   font-family: Avenir, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   padding-top: 20px;
   padding-left: 50px;
   margin-bottom: 20px;
@@ -264,10 +275,16 @@ h3 {
 
 .flex-direction-column {
   flex-direction: column;
+  width: 45%;
+  height: 100%;
 }
 
 .align-items-center {
   align-items: center;
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
 }
 
 .text-align-center {
@@ -278,4 +295,11 @@ h3 {
   display: flex;
   justify-content: center;
   height: 100%;
+}
+
+hr {
+  margin-bottom: 5rem;
+  background-color: lightgrey;
+  height: 1px;
+  border: none;
 }
