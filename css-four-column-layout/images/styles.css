@@ -1,0 +1,39 @@
+.container {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Barlow, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+.column-one-fourth {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 300px;
+}
+
+.icon {
+  width: 100px;
+}
