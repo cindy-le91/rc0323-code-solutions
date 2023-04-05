@@ -7,5 +7,9 @@
 }
 
 .text {
-  font-size: 50px;
+  font-size: 45px;
+}
+
+.toggle-green {
+  color: rgb(24 205 27);
 }
