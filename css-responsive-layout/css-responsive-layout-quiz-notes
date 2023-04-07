@@ -1,0 +1,43 @@
+# css-responsive-layout-quiz-notes
+
+## Quiz Questions
+
+After completing this exercise, you should be able to discuss or answer the following questions:
+
+- What is a **breakpoint** in responsive Web design?
+the breakpoint is the point where using media query becomes necessary
+
+- What is the advantage of using a percentage (_e.g._ `50%`) `width` instead of a fixed (_e.g._ `px`) `width` for a "column" class in a responsive layout?
+using a percentage keeps the dimensions proportionate to the rest of the page
+
+- If you introduce CSS rules for a smaller `min-width` _after_ the styles for a larger `min-width` in your style sheet, the CSS rules for the **smaller** `min-width` will "win". Why is that?
+because of the css rules for specificity. the code that is written last will win out.
+
+## Notes
+
+All student notes should be written here.
+
+
+How to write `Code Examples` in markdown
+
+for JS:
+
+```javascript
+const data = "Howdy";
+```
+
+for HTML:
+
+```html
+<div>
+  <p>This is text content</p>
+</div>
+```
+
+for CSS:
+
+```css
+div {
+  width: 100%;
+}
+```
