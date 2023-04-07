@@ -1,8 +1,12 @@
 document.addEventListener('keydown', function (event) {
+  const letter = document.getElementById(letterCounter);
+  const nextLetter = document.getElementById(letterCounter + 1);
   if (event.key === wordObject[letterCounter]) {
-    const letter = document.getElementById(letterCounter);
     letter.className = 'toggle-green';
     letterCounter++;
+    nextLetter.className = 'active';
+  } else {
+    letter.className = 'active toggle-red';
   }
 });
 

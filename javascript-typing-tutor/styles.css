@@ -13,3 +13,11 @@
 .toggle-green {
   color: rgb(24 205 27);
 }
+
+.toggle-red {
+  color: red;
+}
+
+.active {
+  border-bottom: 5px solid;
+}
