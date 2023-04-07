@@ -15,16 +15,16 @@ const books = [
     author: 'Louisa May Alcott'
   }
 ];
-console.log(books);
+console.log('books: ', books);
 console.log('typeof:', typeof books);
 
-console.log(JSON.stringify(books));
+console.log('books: ', JSON.stringify(books));
 console.log('typeof: ', typeof JSON.stringify(books));
 
-var student = '{ "name": "cindy", "id": "1234" }';
-console.log(student);
+const student = '{ "name": "cindy", "id": "1234" }';
+console.log('student:', student);
 console.log('typeof: ', typeof student);
 
 const newObject = JSON.parse(student);
-console.log(newObject);
+console.log('newObject: ', newObject);
 console.log('typeof: ', typeof newObject);
