@@ -11,7 +11,7 @@ use the setItem method on the localStorage object with key value pairs
 use the getItem method on the localStorage object with the just the key
 
 - What data type can `localStorage` save in the browser?
-localStorage can save objects
+json type data
 
 - When does the `'beforeunload'` event fire on the `window` object?
 it happens right before the a user is about to leave or refresh a page
