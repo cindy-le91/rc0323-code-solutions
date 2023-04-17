@@ -1,0 +1,23 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  font-size: 45px;
+}
+
+.toggle-green {
+  color: rgb(24 205 27);
+}
+
+.toggle-red {
+  color: red;
+}
+
+.active {
+  border-bottom: 5px solid;
+}
