@@ -7,7 +7,7 @@ class Circle extends Shape {
   }
 
   describe() {
-    return 'Circle has an area of ' + this.area + ' and a perimeter of ' + this.perimeter + '.';
+    return super.describe() + 'radius: ' + this.radius;
   }
 }
 

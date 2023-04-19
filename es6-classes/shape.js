@@ -6,7 +6,7 @@ class Shape {
   }
 
   describe() {
-    return 'Shape has an area of ' + this.area + ' and a perimeter of ' + this.perimeter + '.';
+    return 'area: ' + this.area + ' perimeter: ' + this.perimeter + ' ';
 
   }
 }

@@ -8,10 +8,10 @@ class Square extends Shape {
   }
 
   describe() {
-    return 'Square has an area of ' + this.area + ' and a perimeter of ' + this.perimeter + '.';
-
+    return super.describe() + 'width: ' + this.width;
   }
 }
+
 const shapeSquare = new Square(4);
 console.log(shapeSquare);
 console.log(shapeSquare.describe());
