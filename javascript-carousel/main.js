@@ -1,49 +1,71 @@
-const carousel = {
-  active: 1,
-  min: 1,
-  max: 5
-};
+var $carouselImages = document.querySelectorAll('.carousel-image');
+var $progressDots = document.querySelectorAll('.carousel-progress > .fa-circle');
 
-function showNextImage() {
-  const images = [...document.querySelectorAll('.carousel-image')];
-  carousel.active++;
-  if (carousel.active === 6) {
-    carousel.active = carousel.min;
+var timerId;
+var currentIndex = 0;
+
+function showIndex(targetIndex) {
+  for (var i = 0; i < $carouselImages.length; i++) {
+    if (i === targetIndex) {
+      $carouselImages[i].className = 'carousel-image';
+      $progressDots[i].className = 'fas fa-circle';
+    } else {
+      $carouselImages[i].className = 'carousel-image hidden';
+      $progressDots[i].className = 'far fa-circle';
+    }
+  }
+  currentIndex = targetIndex;
+  autoPlay();
+}
+
+function autoPlay() {
+  clearTimeout(timerId);
+  timerId = setTimeout(function () {
+    showIndex(getNextIndex());
+  }, 3000);
+}
+
+function getNextIndex() {
+  if (currentIndex === $carouselImages.length - 1) {
+    return 0;
+  } else {
+    return currentIndex + 1;
+  }
+}
+
+function getPreviousIndex() {
+  if (currentIndex === 0) {
+    return $carouselImages.length - 1;
+  } else {
+    return currentIndex - 1;
+  }
+}
+
+function handleClick(event) {
+
+  if (event.target.matches('.previous')) {
+    showIndex(getPreviousIndex());
+    return;
   }
 
-  images.forEach(image => {
-    image.classList.add('hidden');
-    if (parseInt(image.id) === parseInt(carousel.active)) {
-      image.classList.remove('hidden');
-    }
-  });
-}
-
-function showPeviousImage() {
-  const images = [...document.querySelectorAll('.carousel-image')];
-  carousel.active--;
-
-  if (carousel.active === 0) {
-    carousel.active = carousel.max;
+  if (event.target.matches('.next')) {
+    showIndex(getNextIndex());
+    return;
   }
 
-  images.forEach(image => {
-    image.classList.add('hidden');
-    if (parseInt(image.id) === parseInt(carousel.active)) {
-      image.classList.remove('hidden');
+  if (!event.target.matches('.fa-circle')) {
+    return;
+  }
+
+  for (var i = 0; i < $progressDots.length; i++) {
+    if (event.target === $progressDots[i]) {
+      showIndex(i);
+      break;
     }
-  });
+  }
 }
 
-function addEventListenerShowNextImageToRightArrow() {
-  const arrowButton = document.getElementById('next-button');
-  arrowButton.addEventListener('click', showNextImage.bind(null, carousel));
-}
+var $carouselContainer = document.querySelector('.carousel-container');
+$carouselContainer.addEventListener('click', handleClick);
 
-function addEventListenerShowNextImageToLeftArrow() {
-  const arrowButton = document.getElementById('previous-button');
-  arrowButton.addEventListener('click', showPeviousImage.bind(null, carousel));
-}
-
-addEventListenerShowNextImageToRightArrow();
-addEventListenerShowNextImageToLeftArrow();
+autoPlay();
