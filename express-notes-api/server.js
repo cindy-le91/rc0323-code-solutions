@@ -21,8 +21,7 @@ async function writeData(data) {
 app.get('/api/notes', async (req, res) => {
 
   try {
-    // eslint-disable-next-line no-undef
-    const data = await getData();
+    const data = await readData();
     const notes = [];
     for (const id in data.notes) {
       notes.push(data.notes[id]);
@@ -57,22 +56,72 @@ app.post('/api/notes', async (req, res) => {
   console.log(req.body);
   try {
     if (!req.body.content) {
-      res.status(400).json({ error: 'id must be a positive integer' });
+      res.status(400).json({ error: 'content is a required field' });
     }
+
     const data = await readData();
-    data.notes[data.nextId] = { id: data.nextId, content: req.body.content };
+    const note = { id: data.nextId, content: req.body.content };
+
+    data.notes[data.nextId] = note;
     data.nextId++;
     const updatedData = JSON.stringify(data, null, 2);
     await writeData(updatedData);
 
     res.status(201);
-    res.json({ id: data.nextId - 1, content: req.body.content });
+    res.json(note);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'An unexpected error occurred.' });
   }
 });
 
+app.delete('/api/notes/:id', async (req, res) => {
+  try {
+    const data = await readData();
+    const id = Number(req.params.id);
+
+    if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) {
+      res.status(400).json({ error: 'id must be a positive integer' });
+    }
+    if (data.notes[id] === undefined) {
+      res.status(404).json({ error: `cannot find note with id ${id}` });
+    }
+
+    delete data.notes[id];
+
+    await writeFile('./data.json', JSON.stringify(data, null, 2));
+    res.sendStatus(204);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 app.listen(8080, () => {
   console.log('listening on port 8080');
+});
+
+app.put('/api/notes/:id', async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    const content = req.body.content;
+
+    if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) {
+      res.status(400).json({ error: 'id must be a positive integer' });
+    }
+
+    const data = await readData();
+
+    if (data.notes[id] === undefined) {
+      res.status(404).json({ error: `cannot find note with id ${id}` });
+    }
+
+    data.notes[id].content = content;
+
+    await writeFile('./data.json', JSON.stringify(data, null, 2));
+
+    res.status(200);
+    res.json(data.notes[id]);
+  } catch (error) {
+    res.status(500).json({ error: 'An unexpected error occurred.' });
+  }
 });
