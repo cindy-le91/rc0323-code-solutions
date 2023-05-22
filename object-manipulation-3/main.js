@@ -68,7 +68,7 @@ const determineWinner = (player1, player2, player3, player4) => {
     }
     return winner;
   }, null);
-
+  // Log winner with value
   console.log(`${winner.name} wins with a hand value of ${winner.handValue}!`);
 };
 
