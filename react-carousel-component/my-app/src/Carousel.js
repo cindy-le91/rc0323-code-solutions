@@ -49,9 +49,9 @@ export default function Carousel() {
 
   for (let i = 1; i < numSlides + 1; i++) {
     const isActive = i === activeImageIndex;
-    const indicatorClass = isActive ? 'active' : '';
+    const indicatorClass = isActive ? 'active clickable' : 'clickable';
 
-    indicators.push(<li key={i} className={indicatorClass}></li>);
+    indicators.push(<li onClick={() => {setActiveImageIndex(i)}} key={i} className={indicatorClass}></li>);
   }
 
   return (
