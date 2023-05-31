@@ -7,13 +7,12 @@ export function authMiddleware(req, res, next) {
 
 //  Get the 'Authorization' header from the request.
 const authHeader = req.headers.authorization;
-
+console.log(authHeader);
 //  Parse the token from the header; e.g., auth.split('Bearer ')[1]
 if(!authHeader){
     return res.status(401).json({ message: 'Authentication required' });
 }
 const token = authHeader.split('Bearer ')[1]
-console.log(token)
 
 //  If no header or no token is provided,
 //  throw a 401 error with the message 'authentication required'

@@ -16,7 +16,7 @@ const db = new pg.Pool({
 const app = express();
 app.use(express.json());
 
-app.post('/api/auth/sign-up', authMiddleware, async (req, res, next) => {
+app.post('/api/auth/sign-up', async (req, res, next) => {
   try {
     const { username, password } = req.body;
     if (!username || !password) {
