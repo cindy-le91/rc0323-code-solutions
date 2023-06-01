@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchProduct, toDollars } from '../lib';
 import './ProductDetails.css';
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 export default function ProductDetails() {
   // TODO: Retrieve productId from the route
   const {productId} = useParams();
@@ -40,10 +40,10 @@ export default function ProductDetails() {
         <div className="card-body">
           <div className="row">
             <div className="col">
-              <div className="btn text-secondary">
+              <Link className="btn text-secondary" to="/">
                 {/* TODO: Instead of a div, the above should link to `/` */}
                 &lt; Back to catalog
-              </div>
+              </Link>
             </div>
           </div>
           <div className="row mb-4">
